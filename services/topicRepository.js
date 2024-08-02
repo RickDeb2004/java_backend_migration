@@ -11,6 +11,17 @@ class TopicRepository {
     return await Topic.findByPk(id);
   }
 
+/**
+  * Creates a new topic asynchronously.
+  * @example
+  * create({ name: 'New Topic' })
+  * Returns a newly created topic object.
+  * @param {Object} topic - The topic object to be created.
+  * @returns {Promise<Object>} The created topic object.
+  * @description
+  *   - Uses the Topic model's create method.
+  *   - Returns a promise that resolves to the created topic.
+  */
   async create(topic) {
     return await Topic.create(topic);
   }
